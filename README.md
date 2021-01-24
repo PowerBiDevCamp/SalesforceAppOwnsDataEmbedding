@@ -1,5 +1,5 @@
 # Salesforce App-Owns-Data Embedding Sample
-A SFDX project for Salesforce demonstrating how to implement App-Owns-Data embedding.
+A SFDX project for the Salesforcedeveloper platform demonstrating how to implement App-Owns-Data embedding with Power BI.
 
 ## Requirements in setup
 1. Add Remote Site Setting for **https://login.microsoftonline.com** (Azure AD)
