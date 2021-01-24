@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Power BI Embedded Report" icon-name="utility:graph">
+        <div class="slds-m-around_medium">
+            <template if:true={report.data}>
+                <div data-id="embed-container" style="height: 480px;" >
+                </div>                
+            </template>
+            <template if:true={report.error}>
+                <div>error: {report.error}></div>
+            </template>
+        </div>
+    </lightning-card>
+</template>

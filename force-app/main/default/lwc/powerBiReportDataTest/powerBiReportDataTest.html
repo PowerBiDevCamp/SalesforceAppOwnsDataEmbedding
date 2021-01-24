@@ -1,0 +1,17 @@
+<template>
+    <template if:true={report.data}>
+       <lightning-card title="Power BI Report: {report.data.name}" icon-name="custom:custom14">
+            <ul>
+                <li><b>Workspace ID:</b> {report.data.workspaceId}</li>
+                <li><b>Report ID:</b> {report.data.reportId}</li>
+                <li><b>Report Name:</b> {report.data.name}</li>
+                <li style="word-break: break-all;overflow-wrap: break-word;"><b>Embed URL:</b> {report.data.embedUrl}</li>
+                <li style="word-break: break-all;overflow-wrap: break-word;"><b>Embed Token:</b> {report.data.embedToken}</li>
+                <li><b>Embed Token Exprires:</b> {report.data.embedTokenExpires}</li>
+            </ul>                
+        </lightning-card>
+    </template>
+    <template if:true={report.error}>
+        <div>error: {report.error}></div>
+    </template>
+</template>

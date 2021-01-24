@@ -1,0 +1,12 @@
+ul {
+    background-color: #DDDDDD;
+    border: 1px solid #AAAAAA;
+    margin: 8px;
+    padding: 8px;
+}
+
+ul li {
+    padding: 4px;
+    padding-left: 12px;
+    line-height: 1.25em;
+}
