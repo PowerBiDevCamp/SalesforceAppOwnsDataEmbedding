@@ -1,13 +1,13 @@
 public with sharing class PowerBiEmbedManager {
     
-    public static final String TENANT_ID = '2f23c5ea-5a75-41f6-922e-d3392313e61d';
-    public static final String CLIENT_ID = '8a026627-2648-445a-8374-db09e09a8668';
-    public static final String CLIENT_SECRET = 'OGU5ZjBiY2EtNTk5OC00OTBhLTg2ZjItODhlNGExOTdlMjAx=';
+    // Azure AD configuration setting for Tenant and Application
+    public static final String TENANT_ID = '11111111-1111-1111-1111-111111111111';
+    public static final String CLIENT_ID = '22222222-2222-2222-2222-222222222222';
+    public static final String CLIENT_SECRET = 'MY_CLIENT_SECRET_HERE';
     
-    public static final String WORKSPACE_ID = 'ddab987a-7941-4eb5-a084-370d422dfcac';
-    public static final String REPORT_ID = '3e75d100-b21a-4129-8e84-6c6e90ccbd7e';
-
-    public PowerBiEmbedManager() {}
+    // Power BI configuration settings for traget workspace Id and report Id
+    public static final String WORKSPACE_ID = '33333333-3333-3333-3333-333333333333';
+    public static final String REPORT_ID = '44444444-4444-4444-4444-444444444444';
     
     // class used to seriliaze request body for client creential flow
     public class ClientCredentialPostData {
