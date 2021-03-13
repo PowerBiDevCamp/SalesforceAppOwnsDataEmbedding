@@ -1,0 +1,4 @@
+<design:component label="Power BI Report (Aura)" >
+    <design:attribute name="workspaceId" label="Workspace ID" description="Enter Workspace ID for target report" />
+    <design:attribute name="reportId" label="Report ID" description="Enter Report ID for target report"  />
+</design:component>

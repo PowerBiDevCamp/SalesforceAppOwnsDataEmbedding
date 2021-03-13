@@ -1,0 +1,31 @@
+.THIS.mainCard{
+    background-color: white;
+    border: 1px solid black;
+}
+
+.THIS .slds-card__header {
+    background-color: black;
+    color: #EDBE11;
+    padding: 6px;
+    margin-bottom: 0;
+}
+
+.THIS .slds-card__body, .THIS .sds-c-card-header-spacing-block-end {
+    margin: 0;
+}
+
+.THIS svg {
+    background-color: #EDBE11;
+    stroke: white;
+    fill: black;
+}
+
+.THIS .error-message {
+    margin: 24px;
+    font-size: 1.5em;
+    color: darkred;
+}
+
+.THIS .error-message:empty {
+    display: none;
+ }

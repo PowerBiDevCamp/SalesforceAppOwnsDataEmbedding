@@ -1,0 +1,22 @@
+<aura:component
+  access="global"
+  controller="PowerBiEmbedManager"
+  implements="force:appHostable,flexipage:availableForAllPageTypes"
+>
+  <aura:attribute name="workspaceId" type="String" default="" />
+  <aura:attribute name="reportId" type="String" default="" />
+  <aura:attribute name="errorMessage" type="String" default="" />
+
+  <ltng:require
+    scripts="{!$Resource.powerbijs}"
+    afterScriptsLoaded="{!c.afterScriptsLoaded}"
+  />
+
+  <lightning:card title="Embedded Power BI Report (AURA)" class="mainCard" iconName="utility:graph" >
+    <div>
+      <div aura:id="error-message" class="error-message" >{!v.errorMessage}</div>
+      <div aura:id="embed-container" style="height: 560px"></div>  
+    </div>
+  </lightning:card>
+  
+</aura:component>
