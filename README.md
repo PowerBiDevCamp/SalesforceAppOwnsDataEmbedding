@@ -1,10 +1,22 @@
+In order to setup and run this sample, you need to install the following
+software.
+
+-   [Install Node.JS](https://nodejs.org/en/download/)
+
+-   [Install Visual Studio Code](https://code.visualstudio.com/Download)
+
+When you have installed Visual Studio Code, you must install a Visual
+Studio Code extension the Salesforce Expansion Pack.
+
+<img src="images\media\image1.png" style="width:3.59167in;height:1.98739in" />
+
 Great blog article in 2017. But so much has changed.
 
 So much has changed.
 
 -   Service principal can be used for App-Owns-Data embedding
 
-<img src="images\media\image1.png" style="width:5.025in;height:1.93398in" />
+<img src="images\media\image2.png" style="width:5.025in;height:1.93398in" />
 
 Here is the GitHub repo with the sample code discussed in this article.
 This code is provided in an SFDX project. This is not an introduction to
@@ -29,7 +41,23 @@ Here are the Salesforce features
 
 Create remote site settings
 
+<img src="images\media\image3.png" style="width:3.86667in;height:1.26827in" />
+
 Create Custom Metadata Types with auth settings
+
+<img src="images\media\image4.png" style="width:4.275in;height:1.6625in" />
+
+This is placeholder text.
+
+<img src="images\media\image5.png" style="width:4.80833in;height:1.07666in" />
+
+This is placeholder text.
+
+<img src="images\media\image6.png" style="width:4.69167in;height:2.05185in" />
+
+This is placeholder text.
+
+<img src="images\media\image7.png" style="width:5.625in;height:1.74167in" />
 
 Upload powerbi.js as a Resource
 
