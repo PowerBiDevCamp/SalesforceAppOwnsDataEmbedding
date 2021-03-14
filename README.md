@@ -41,23 +41,23 @@ Here are the Salesforce features
 
 Create remote site settings
 
-<img src="images\media\image3.png" style="width:3.86667in;height:1.26827in" />
+<img src="images\media\image3.png" style="width:2.7in;height:0.8856in" />
 
 Create Custom Metadata Types with auth settings
 
-<img src="images\media\image4.png" style="width:4.275in;height:1.6625in" />
+<img src="images\media\image4.png" style="width:3.125in;height:1.21528in" />
 
 This is placeholder text.
 
-<img src="images\media\image5.png" style="width:4.80833in;height:1.07666in" />
+<img src="images\media\image5.png" style="width:3.2in;height:0.71653in" />
 
 This is placeholder text.
 
-<img src="images\media\image6.png" style="width:4.69167in;height:2.05185in" />
+<img src="images\media\image6.png" style="width:3.45833in;height:1.51247in" />
 
 This is placeholder text.
 
-<img src="images\media\image7.png" style="width:5.625in;height:1.74167in" />
+<img src="images\media\image7.png" style="width:2.975in;height:0.92115in" />
 
 Upload powerbi.js as a Resource
 
