@@ -61,6 +61,8 @@ This is placeholder text.
 
 Upload powerbi.js as a Resource
 
+<img src="images\media\image8.png" style="width:2.75in;height:0.93123in" />
+
 ## Salesforce DX Project: Next Steps
 
 Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
