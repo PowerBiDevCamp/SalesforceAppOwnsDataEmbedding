@@ -6,8 +6,18 @@ embedding with Power BI reports using the [**Salesforce Developer
 Experience
 (SFDX)**](https://developer.salesforce.com/developer-centers/developer-experience/)
 and the [**Salesforce
-CLI**](https://developer.salesforce.com/tools/sfdxcli). The architecture
-of this solution is built on top of an Apex class named
+CLI**](https://developer.salesforce.com/tools/sfdxcli). When developing
+custom software solutions for a Salesforce environment, App-Owns-Data
+embedding has a big advantage over User-Owns-Data embedding. It does not
+require creating an Azure AD organizational account and acquiring a
+Power BI license for each individual user. When developing with the
+App-Owns-Data embedding model, your Salesforce users remain unknown to
+Power BI. You have the flexibility to embed reports for any users you
+want.
+
+## SalesforceAppOwnsDataEmbedding Project Architecture
+
+The architecture of this solution is built on top of an Apex class named
 [**PowerBiEmbedManager**](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/blob/main/SalesforceAppOwnsDataEmbedding/force-app/main/default/classes/PowerBiEmbedManager.cls)
 which is programmed to interact with both Azure AD and the [**Power BI
 REST API**](https://docs.microsoft.com/en-us/rest/api/power-bi/) as
