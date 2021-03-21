@@ -28,20 +28,22 @@ Embed Url associated with a specific report ID. Second,
 **PowerBiEmbedManager** must call the Power BI REST API to generate
 embed tokens which are required with App-Owns-Data embedding.
 
-**PowerBiEmbedManager** has been designed as a controller class for
-client-side components. It exposes a public
-**getEmbeddingDataForReport** method which has been marked with the
-**AuraEnabled** annotation making it accessible to Lighting Aura
-components and to Lightning web components. A client-side component can
-call **getEmbeddingDataForReport** to retrieve the embedding data and
-the embed token for a specific report.
+**PowerBiEmbedManager** has been designed as a controller class by
+exposing a public **getEmbeddingDataForReport** method which has been
+marked with the **AuraEnabled** annotation making it accessible to
+Lighting Aura components and to Lightning web components. A client-side
+component can call **getEmbeddingDataForReport** to retrieve the
+embedding data and the embed token for a specific report.
 
 The **SalesforceAppOwnsDataEmbedding** project contains a Lighting Aura
 component named
 [**powerBiReportAura**](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/tree/main/SalesforceAppOwnsDataEmbedding/force-app/main/default/aura/powerBiReportAura).
 When you add an instance of the **powerBiReportAura** component to a
 Lightning application page, you must configure it with the Workspace ID
-and the Report ID for a report in a Power BI workspace.
+and the Report ID for a specific report in a Power BI workspace. This
+design makes it possible to add multiple instances of the
+**powerBiReportAura** component and configure each one to embed a
+different Power BI report.
 
 <img src="ReadMe\media\image2.png" style="width:5.2949in;height:1.30519in" />
 
