@@ -13,8 +13,8 @@ shown in the following diagram.
 
 <img src="ReadMe\media\image1.png" style="width:4.88884in;height:2.08441in" />
 
-**PowerBiEmbedManager** implements [Client Credentials
-Flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow)
+**PowerBiEmbedManager** implements [**Client Credentials
+Flow**](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow)
 when it interacts with Azure AD to acquire an app-only access token.
 App-only access tokens are important because they makes it possible to
 call the Power BI REST API under the identity of a service principal
@@ -38,7 +38,7 @@ the embed token for a specific report.
 
 The **SalesforceAppOwnsDataEmbedding** project contains a Lighting Aura
 component named
-[powerBiReportAura](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/tree/main/SalesforceAppOwnsDataEmbedding/force-app/main/default/aura/powerBiReportAura).
+[**powerBiReportAura**](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/tree/main/SalesforceAppOwnsDataEmbedding/force-app/main/default/aura/powerBiReportAura).
 When you add an instance of the **powerBiReportAura** component to a
 Lightning application page, you must configure it with the Workspace ID
 and the Report ID for a report in a Power BI workspace.
