@@ -1,7 +1,8 @@
-**SalesforceAppOwnsDataEmbedding** is a sample project which
-demonstrates how to implement App-Owns-Data embedding with Power BI
-reports using the Salesforce Developer Experience (SFDX) and the SFDX
-CLI. This solution is built on top of an Apex class named
+[SalesforceAppOwnsDataEmbedding](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/tree/main/SalesforceAppOwnsDataEmbedding/force-app/main/default/aura/powerBiReportAura)
+is a sample project which demonstrates how to implement App-Owns-Data
+embedding with Power BI reports using the Salesforce Developer
+Experience (SFDX) and the SFDX CLI. The architecture of this solution is
+built on top of an Apex class named
 [PowerBiEmbedManager](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/blob/main/SalesforceAppOwnsDataEmbedding/force-app/main/default/classes/PowerBiEmbedManager.cls)
 which is programmed to interact with both Azure AD and the [Power BI
 REST API](https://docs.microsoft.com/en-us/rest/api/power-bi/) as shown
@@ -11,24 +12,27 @@ in the following diagram.
 
 **PowerBiEmbedManager** implements [Client Credentials
 Flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow)
-to acquire an app-only access token from Azure AD. The app-only access
-token makes it possible for the **PowerBiEmbedManager** to call the
-Power BI REST API under the identity of a service principal instead of
-the identity of a user which is a best practice for developing with
-App-Owns-Data embedding.
-
-**PowerBiEmbedManager** calls the Power BI REST API to acquire metadata
-associated with a specific report ID such as the report's Embed Url and
-the underlying dataset Id. **PowerBiEmbedManager** also calls the Power
-BI REST API to generate embed tokens which are required when developing
+when it interacts with Azure AD to acquire an app-only access token.
+App-only access tokens are important because they makes it possible to
+call the Power BI REST API under the identity of a service principal
+instead of calling under the identity of a user. Making calls to the
+Power BI REST API as service principal is a best practice for developing
 with App-Owns-Data embedding.
 
-**PowerBiEmbedManager** exposes a public method named
-**getEmbeddingDataForReport** which is marked with the **AuraEnabled**
-annotation making it accessible to both Lighting Aura components and
-Lightning web components running in the browser. This is what makes it
-possible to move the embed data and the embed token for a report back to
-the browser where they can be used to embed a report.
+**PowerBiEmbedManager** must call the Power BI REST API for two
+different reasons. First, it much acquire embedding data associated with
+a specific report ID such as the report's Embed Url and the underlying
+dataset Id. Second, **PowerBiEmbedManager** must call the Power BI REST
+API to generate embed tokens which are required with App-Owns-Data
+embedding.
+
+**PowerBiEmbedManager** has been designed as a controller class for
+client-side components. It exposes a public
+**getEmbeddingDataForReport** method which has been marked with the
+**AuraEnabled** annotation making it accessible to Lighting Aura
+components and to Lightning web components running in the browser. A
+client-side component can call **getEmbeddingDataForReport** to retrieve
+the embedding data and the embed token for a specific report.
 
 The **SalesforceAppOwnsDataEmbedding** project contains a Lighting Aura
 component named
@@ -40,26 +44,28 @@ a report in a Power BI workspace.
 <img src="ReadMe\media\image2.png" style="width:5.2949in;height:1.30519in" />
 
 Once you have configure a **powerBiReportAura** component with a
-workspace Id and Report Id, this component will pass these two parameter
-values when it calls **getEmbeddingDataForReport**. The
-**PowerBiEmbedManager** class responds to a call to
-**getEmbeddingDataForReport** by returning the embedding data and the
-embed token requires to embed a report in the browser.
+workspace ID and Report ID, these two configuration valued will be
+passed as parameters when the component calls
+**getEmbeddingDataForReport**. The **PowerBiEmbedManager** class
+responds to a call to **getEmbeddingDataForReport** by returning the
+embedding data and the embed token which will be used to embed a report
+in the browser.
 
 <img src="ReadMe\media\image3.png" style="width:4.83117in;height:1.24941in" />
 
 Once the call to **getEmbeddingDataForReport** returns back to the
-browser, the **powerBiReportAura** component has all the embedding data
-and the embed token required to embed a report. In a final step, the
-**powerBiReportAura** component uses the Power BI JavaScript API
-complete the report embedding process in the browser.
+browser, the **powerBiReportAura** component has the embedding data and
+the embed token required to embed a report. In a final step, the
+**powerBiReportAura** component executes JavaScript code in the browser
+using the Power BI JavaScript API complete the report embedding process.
 
 <img src="ReadMe\media\image4.png" style="width:5.14935in;height:1.34329in" />
 
-As the embedded report is loaded, it establishes a direct connection to
-the Power BI Service. As users begin to interact with the report by
-setting filters and adjusting slicers, these user actions result in
-direct calls to the Power BI Service.
+When a Power BI report is embedded on a Lightning application page, it
+establishes a direct connection back to the Power BI Service. As users
+begin to interact with the report by setting filters and adjusting
+slicers, these user actions result in direct calls to the Power BI
+Service.
 
 <img src="ReadMe\media\image5.png" style="width:5.1039in;height:1.75628in" />
 
