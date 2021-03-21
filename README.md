@@ -7,12 +7,12 @@ embedding with Power BI reports. This project has been created using the
 (SFDX)**](https://developer.salesforce.com/developer-centers/developer-experience/)
 and the [**Salesforce
 CLI**](https://developer.salesforce.com/tools/sfdxcli). The goal of this
-project is to provide guidance and demonstrate best practices to
+sample project is to provide guidance and demonstrate best practices to
 developers who need to implement Power BI embedding in a Salesforce
 environment.
 
 App-Owns-Data embedding has a big advantage over User-Owns-Data
-embedding when developing custom solutions for a Salesforce environment.
+embedding when developing for Salesforce. More specifically,
 App-Owns-Data embedding does not require each user to have an Azure AD
 organizational account and a Power BI license. When developing with the
 App-Owns-Data embedding model, your Salesforce users can remain unknown
