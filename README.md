@@ -15,7 +15,7 @@ App-Owns-Data embedding model, your Salesforce users remain unknown to
 Power BI. You have the flexibility to embed reports for any users you
 want.
 
-## SalesforceAppOwnsDataEmbedding Project Architecture
+## Project Architecture
 
 The architecture of this solution is built on top of an Apex class named
 [**PowerBiEmbedManager**](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/blob/main/SalesforceAppOwnsDataEmbedding/force-app/main/default/classes/PowerBiEmbedManager.cls)
