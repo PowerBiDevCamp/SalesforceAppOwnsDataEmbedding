@@ -2,18 +2,22 @@
 
 [**SalesforceAppOwnsDataEmbedding**](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/tree/main/SalesforceAppOwnsDataEmbedding/force-app/main/default/aura/powerBiReportAura)
 is a sample project which demonstrates how to implement App-Owns-Data
-embedding with Power BI reports using the [**Salesforce Developer
-Experience
+embedding with Power BI reports. This project has been created using the
+[**Salesforce Developer Experience
 (SFDX)**](https://developer.salesforce.com/developer-centers/developer-experience/)
 and the [**Salesforce
-CLI**](https://developer.salesforce.com/tools/sfdxcli). When developing
-custom software solutions for a Salesforce environment, App-Owns-Data
-embedding has a big advantage over User-Owns-Data embedding. It does not
-require creating an Azure AD organizational account and acquiring a
-Power BI license for each individual user. When developing with the
-App-Owns-Data embedding model, your Salesforce users remain unknown to
-Power BI. You have the flexibility to embed reports for any users you
-want.
+CLI**](https://developer.salesforce.com/tools/sfdxcli). The goal of this
+project is to provide guidance and demonstrate best practices to
+developers who need to implement Power BI embedding in a Salesforce
+environment.
+
+App-Owns-Data embedding has a big advantage over User-Owns-Data
+embedding when developing custom solutions for a Salesforce environment.
+App-Owns-Data embedding does not require each user to have an Azure AD
+organizational account and a Power BI license. When developing with the
+App-Owns-Data embedding model, your Salesforce users can remain unknown
+to Power BI and your code has the flexibility to embed reports for any
+users you want.
 
 ## Project Architecture
 
