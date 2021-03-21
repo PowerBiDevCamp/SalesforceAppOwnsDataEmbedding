@@ -27,7 +27,7 @@ which is programmed to interact with both Azure AD and the [**Power BI
 REST API**](https://docs.microsoft.com/en-us/rest/api/power-bi/) as
 shown in the following diagram.
 
-<img src="ReadMe\media\image1.png" style="width:4.88884in;height:2.08441in" />
+<img src="ReadMe\media\image1.png" style="width:4.27964in;height:1.82468in" />
 
 **PowerBiEmbedManager** implements [**Client Credentials
 Flow**](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow)
@@ -61,7 +61,7 @@ design makes it possible to add multiple instances of the
 **powerBiReportAura** component and configure each one to embed a
 different Power BI report.
 
-<img src="ReadMe\media\image2.png" style="width:5.2949in;height:1.30519in" />
+<img src="ReadMe\media\image2.png" style="width:5.25325in;height:1.29493in" />
 
 Once you have configured a **powerBiReportAura** component instance with
 a workspace ID and Report ID, these two configuration valued will be
@@ -70,7 +70,7 @@ passed as parameters when the component calls
 responds to this remote function call by returning the embedding data
 and the embed token which will be used to embed a report in the browser.
 
-<img src="ReadMe\media\image3.png" style="width:4.83117in;height:1.24941in" />
+<img src="ReadMe\media\image3.png" style="width:5.48681in;height:1.41897in" />
 
 Once the **powerBiReportAura** component has successfully called
 **getEmbeddingDataForReport**, it has the embedding data and the embed
@@ -80,7 +80,7 @@ the browser and uses the [**Power BI JavaScript
 API**](https://docs.microsoft.com/en-us/javascript/api/overview/powerbi/overview)
 to implement the report embedding process.
 
-<img src="ReadMe\media\image4.png" style="width:5.14935in;height:1.34329in" />
+<img src="ReadMe\media\image4.png" style="width:5.48701in;height:1.43137in" />
 
 When a Power BI report is embedded on a Web page such as a Lightning
 application page, it establishes a direct connection back to the Power
@@ -89,9 +89,64 @@ with it by setting filters and navigating between pages. As users
 interact with the report, these interactions are handled by direct
 communications between the report and the Power BI Service.
 
-<img src="ReadMe\media\image5.png" style="width:5.1039in;height:1.75628in" />
+<img src="ReadMe\media\image5.png" style="width:5.81216in;height:2in" />
 
-## Setting Up This Sample in a Salesforce Development Environment
+## Setting Up This Sample Project
+
+In order to set up and test this sample project, you'll need a Power BI
+report in a Microsoft 365 tenant in which you can create a new Azure AD
+application. You'll also need a Salesforce development environment. If
+you don't already have a Salesforce development environment, you can
+sign up for one for free using the [Salesforce lightning platform signup
+page](https://developer.salesforce.com/signup).
+
+Once you have a Salesforce organization for testing, you will need to
+complete the following three tasks to configure the environment for the
+**SalesforceAppOwnsDataEmbedding** project.
+
+-   Add remote site settings for the Azure AD token endpoint and the
+    Power BI Service API
+
+-   Create an Azure AD application to call the Power Service API
+
+-   Create a Custom Metadata Type to store client credentials for the
+    Azure AD application
+
+-   Create a static resource by uploading a copy of the Power BI
+    JavaScript API (powerbi.js)
+
+Start by navigating to the Salesforce organization **Setup page** and
+searching for the **Remote Site Settings** page. Use the Remote Site
+Setting to add remote site settings for
+**https://login.microsoftonline.com** and **https://api.powerbi.com**.
+Once again, these configuration settings are required so that code in
+the Apex class can execute HTTP requests to Azure AD and the Power BI
+REST API.
+
+<img src="ReadMe\media\image6.png" style="width:4.23662in;height:1.38961in" alt="Graphical user interface, text, application, email Description automatically generated" />
+
+After adding the remote site settings, the next step is to create a new
+Custom Metadata Type.
+
+Create Custom Metadata Types with auth settings
+
+<img src="ReadMe\media\image7.png" style="width:3.54804in;height:1.45in" alt="Graphical user interface, text, application, email Description automatically generated" />
+
+This is placeholder text.
+
+<img src="ReadMe\media\image8.png" style="width:3.2in;height:0.71653in" alt="Graphical user interface, text, application Description automatically generated" />
+
+This is placeholder text.
+
+<img src="ReadMe\media\image9.png" style="width:3.45833in;height:1.51247in" alt="Graphical user interface, application Description automatically generated" />
+
+This is placeholder text.
+
+<img src="ReadMe\media\image10.png" style="width:2.975in;height:0.92115in" alt="Graphical user interface, application Description automatically generated" />
+
+Upload powerbi.js as a Resource
+
+<img src="ReadMe\media\image11.png" style="width:2.75in;height:0.93123in" alt="Graphical user interface, text, application, email Description automatically generated" />
 
 In order to setup and run this sample, you need to install the following
 software.
@@ -103,7 +158,7 @@ software.
 When you have installed Visual Studio Code, you must install a Visual
 Studio Code extension the Salesforce Expansion Pack.
 
-<img src="ReadMe\media\image6.png" style="width:3.59167in;height:1.98739in" />
+<img src="ReadMe\media\image12.png" style="width:3.59167in;height:1.98739in" />
 
 Great blog article in 2017. But so much has changed.
 
@@ -111,7 +166,7 @@ So much has changed.
 
 -   Service principal can be used for App-Owns-Data embedding
 
-<img src="ReadMe\media\image7.png" style="width:5.025in;height:1.93398in" />
+<img src="ReadMe\media\image13.png" style="width:5.025in;height:1.93398in" />
 
 Here is the GitHub repo with the sample code discussed in this article.
 This code is provided in an SFDX project. This is not an introduction to
@@ -133,30 +188,6 @@ Here are the Salesforce features
 -   Lightning Web Component
 
 # Getting Started with the Sample
-
-Create remote site settings
-
-<img src="ReadMe\media\image8.png" style="width:2.7in;height:0.8856in" />
-
-Create Custom Metadata Types with auth settings
-
-<img src="ReadMe\media\image9.png" style="width:3.54804in;height:1.45in" />
-
-This is placeholder text.
-
-<img src="ReadMe\media\image10.png" style="width:3.2in;height:0.71653in" />
-
-This is placeholder text.
-
-<img src="ReadMe\media\image11.png" style="width:3.45833in;height:1.51247in" />
-
-This is placeholder text.
-
-<img src="ReadMe\media\image12.png" style="width:2.975in;height:0.92115in" />
-
-Upload powerbi.js as a Resource
-
-<img src="ReadMe\media\image13.png" style="width:2.75in;height:0.93123in" />
 
 ## Salesforce DX Project: Next Steps
 
