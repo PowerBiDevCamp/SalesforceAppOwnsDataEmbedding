@@ -1,15 +1,15 @@
-[SalesforceAppOwnsDataEmbedding](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/tree/main/SalesforceAppOwnsDataEmbedding/force-app/main/default/aura/powerBiReportAura)
+[**SalesforceAppOwnsDataEmbedding**](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/tree/main/SalesforceAppOwnsDataEmbedding/force-app/main/default/aura/powerBiReportAura)
 is a sample project which demonstrates how to implement App-Owns-Data
-embedding with Power BI reports using the [Salesforce Developer
+embedding with Power BI reports using the [**Salesforce Developer
 Experience
-(SFDX)](https://developer.salesforce.com/developer-centers/developer-experience/)
-and the [Salesforce
-CLI](https://developer.salesforce.com/tools/sfdxcli). The architecture
+(SFDX)**](https://developer.salesforce.com/developer-centers/developer-experience/)
+and the [**Salesforce
+CLI**](https://developer.salesforce.com/tools/sfdxcli). The architecture
 of this solution is built on top of an Apex class named
-[PowerBiEmbedManager](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/blob/main/SalesforceAppOwnsDataEmbedding/force-app/main/default/classes/PowerBiEmbedManager.cls)
-which is programmed to interact with both Azure AD and the [Power BI
-REST API](https://docs.microsoft.com/en-us/rest/api/power-bi/) as shown
-in the following diagram.
+[**PowerBiEmbedManager**](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/blob/main/SalesforceAppOwnsDataEmbedding/force-app/main/default/classes/PowerBiEmbedManager.cls)
+which is programmed to interact with both Azure AD and the [**Power BI
+REST API**](https://docs.microsoft.com/en-us/rest/api/power-bi/) as
+shown in the following diagram.
 
 <img src="ReadMe\media\image1.png" style="width:4.88884in;height:2.08441in" />
 
@@ -24,25 +24,24 @@ with App-Owns-Data embedding.
 
 **PowerBiEmbedManager** must call the Power BI REST API for two
 different reasons. First, it much acquire embedding data associated with
-a specific report ID such as the report's Embed Url and the underlying
-dataset Id. Second, **PowerBiEmbedManager** must call the Power BI REST
-API to generate embed tokens which are required with App-Owns-Data
-embedding.
+a specific report ID such as the Embed Url. Second,
+**PowerBiEmbedManager** must call the Power BI REST API to generate
+embed tokens which are required with App-Owns-Data embedding.
 
 **PowerBiEmbedManager** has been designed as a controller class for
 client-side components. It exposes a public
 **getEmbeddingDataForReport** method which has been marked with the
 **AuraEnabled** annotation making it accessible to Lighting Aura
-components and to Lightning web components running in the browser. A
-client-side component can call **getEmbeddingDataForReport** to retrieve
-the embedding data and the embed token for a specific report.
+components and to Lightning web components. A client-side component can
+call **getEmbeddingDataForReport** to retrieve the embedding data and
+the embed token for a specific report.
 
 The **SalesforceAppOwnsDataEmbedding** project contains a Lighting Aura
 component named
 [powerBiReportAura](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/tree/main/SalesforceAppOwnsDataEmbedding/force-app/main/default/aura/powerBiReportAura).
-When you add an instance of this component to a Lightning application
-page, you must configure it with the Workspace ID and the Report ID for
-a report in a Power BI workspace.
+When you add an instance of the **powerBiReportAura** component to a
+Lightning application page, you must configure it with the Workspace ID
+and the Report ID for a report in a Power BI workspace.
 
 <img src="ReadMe\media\image2.png" style="width:5.2949in;height:1.30519in" />
 
@@ -60,7 +59,9 @@ Once the call to **getEmbeddingDataForReport** returns back to the
 browser, the **powerBiReportAura** component has the embedding data and
 the embed token required to embed a report. In a final step, the
 **powerBiReportAura** component executes JavaScript code in the browser
-using the Power BI JavaScript API complete the report embedding process.
+using the [**Power BI JavaScript
+API**](https://docs.microsoft.com/en-us/javascript/api/overview/powerbi/overview)
+complete the report embedding process.
 
 <img src="ReadMe\media\image4.png" style="width:5.14935in;height:1.34329in" />
 
