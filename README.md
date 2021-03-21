@@ -7,7 +7,7 @@ which is programmed to interact with both Azure AD and the [Power BI
 REST API](https://docs.microsoft.com/en-us/rest/api/power-bi/) as shown
 in the following diagram.
 
-<img src="ReadMe\media\image1.png" style="width:4.92108in;height:2.09816in" />
+<img src="ReadMe\media\image1.png" style="width:4.88884in;height:2.08441in" />
 
 **PowerBiEmbedManager** implements [Client Credentials
 Flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow)
@@ -37,7 +37,7 @@ When you add an instance of this component to a Lightning application
 page, you must configure it with the Workspace ID and the Report ID for
 a report in a Power BI workspace.
 
-<img src="ReadMe\media\image2.png" style="width:5.33742in;height:1.31568in" />
+<img src="ReadMe\media\image2.png" style="width:5.2949in;height:1.30519in" />
 
 Once you have configure a **powerBiReportAura** component with a
 workspace Id and Report Id, this component will pass these two parameter
@@ -46,17 +46,22 @@ values when it calls **getEmbeddingDataForReport**. The
 **getEmbeddingDataForReport** by returning the embedding data and the
 embed token requires to embed a report in the browser.
 
-<img src="ReadMe\media\image3.png" style="width:5.812in;height:1.50307in" />
+<img src="ReadMe\media\image3.png" style="width:4.83117in;height:1.24941in" />
 
 Once the call to **getEmbeddingDataForReport** returns back to the
-browser, the **powerBiReportAura** component uses the Power BI
-JavaScript API complete the report embedding process in the browser. As
-the embedded report is loaded, it establishes a direct connection to the
-Power BI Service. As users begin to interact with the report by setting
-filters and adjusting slicers, these user actions result in direct calls
-to the Power BI Service.
+browser, the **powerBiReportAura** component has all the embedding data
+and the embed token required to embed a report. In a final step, the
+**powerBiReportAura** component uses the Power BI JavaScript API
+complete the report embedding process in the browser.
 
-<img src="ReadMe\media\image4.png" style="width:4.40968in;height:1.90798in" />
+<img src="ReadMe\media\image4.png" style="width:5.14935in;height:1.34329in" />
+
+As the embedded report is loaded, it establishes a direct connection to
+the Power BI Service. As users begin to interact with the report by
+setting filters and adjusting slicers, these user actions result in
+direct calls to the Power BI Service.
+
+<img src="ReadMe\media\image5.png" style="width:5.1039in;height:1.75628in" />
 
 ## Setting Up This Sample Project
 
@@ -70,7 +75,7 @@ software.
 When you have installed Visual Studio Code, you must install a Visual
 Studio Code extension the Salesforce Expansion Pack.
 
-<img src="ReadMe\media\image5.png" style="width:3.59167in;height:1.98739in" />
+<img src="ReadMe\media\image6.png" style="width:3.59167in;height:1.98739in" />
 
 Great blog article in 2017. But so much has changed.
 
@@ -78,7 +83,7 @@ So much has changed.
 
 -   Service principal can be used for App-Owns-Data embedding
 
-<img src="ReadMe\media\image6.png" style="width:5.025in;height:1.93398in" />
+<img src="ReadMe\media\image7.png" style="width:5.025in;height:1.93398in" />
 
 Here is the GitHub repo with the sample code discussed in this article.
 This code is provided in an SFDX project. This is not an introduction to
@@ -103,27 +108,27 @@ Here are the Salesforce features
 
 Create remote site settings
 
-<img src="ReadMe\media\image7.png" style="width:2.7in;height:0.8856in" />
+<img src="ReadMe\media\image8.png" style="width:2.7in;height:0.8856in" />
 
 Create Custom Metadata Types with auth settings
 
-<img src="ReadMe\media\image8.png" style="width:3.54804in;height:1.45in" />
+<img src="ReadMe\media\image9.png" style="width:3.54804in;height:1.45in" />
 
 This is placeholder text.
 
-<img src="ReadMe\media\image9.png" style="width:3.2in;height:0.71653in" />
+<img src="ReadMe\media\image10.png" style="width:3.2in;height:0.71653in" />
 
 This is placeholder text.
 
-<img src="ReadMe\media\image10.png" style="width:3.45833in;height:1.51247in" />
+<img src="ReadMe\media\image11.png" style="width:3.45833in;height:1.51247in" />
 
 This is placeholder text.
 
-<img src="ReadMe\media\image11.png" style="width:2.975in;height:0.92115in" />
+<img src="ReadMe\media\image12.png" style="width:2.975in;height:0.92115in" />
 
 Upload powerbi.js as a Resource
 
-<img src="ReadMe\media\image12.png" style="width:2.75in;height:0.93123in" />
+<img src="ReadMe\media\image13.png" style="width:2.75in;height:0.93123in" />
 
 ## Salesforce DX Project: Next Steps
 
