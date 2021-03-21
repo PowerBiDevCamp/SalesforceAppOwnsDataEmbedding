@@ -1,3 +1,5 @@
+# Salesforce App-Owns-Data Embedding Sample
+
 [**SalesforceAppOwnsDataEmbedding**](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/tree/main/SalesforceAppOwnsDataEmbedding/force-app/main/default/aura/powerBiReportAura)
 is a sample project which demonstrates how to implement App-Owns-Data
 embedding with Power BI reports using the [**Salesforce Developer
@@ -47,35 +49,35 @@ different Power BI report.
 
 <img src="ReadMe\media\image2.png" style="width:5.2949in;height:1.30519in" />
 
-Once you have configure a **powerBiReportAura** component with a
-workspace ID and Report ID, these two configuration valued will be
+Once you have configured a **powerBiReportAura** component instance with
+a workspace ID and Report ID, these two configuration valued will be
 passed as parameters when the component calls
 **getEmbeddingDataForReport**. The **PowerBiEmbedManager** class
-responds to a call to **getEmbeddingDataForReport** by returning the
-embedding data and the embed token which will be used to embed a report
-in the browser.
+responds to this remote function call by returning the embedding data
+and the embed token which will be used to embed a report in the browser.
 
 <img src="ReadMe\media\image3.png" style="width:4.83117in;height:1.24941in" />
 
-Once the call to **getEmbeddingDataForReport** returns back to the
-browser, the **powerBiReportAura** component has the embedding data and
-the embed token required to embed a report. In a final step, the
-**powerBiReportAura** component executes JavaScript code in the browser
-using the [**Power BI JavaScript
+Once the **powerBiReportAura** component has successfully called
+**getEmbeddingDataForReport**, it has the embedding data and the embed
+token it needs to embed a report on the hosting web page. In a final
+step, the **powerBiReportAura** component executes JavaScript code in
+the browser and uses the [**Power BI JavaScript
 API**](https://docs.microsoft.com/en-us/javascript/api/overview/powerbi/overview)
-complete the report embedding process.
+to implement the report embedding process.
 
 <img src="ReadMe\media\image4.png" style="width:5.14935in;height:1.34329in" />
 
-When a Power BI report is embedded on a Lightning application page, it
-establishes a direct connection back to the Power BI Service. As users
-begin to interact with the report by setting filters and adjusting
-slicers, these user actions result in direct calls to the Power BI
-Service.
+When a Power BI report is embedded on a Web page such as a Lightning
+application page, it establishes a direct connection back to the Power
+BI Service. Once the report has loaded, the user can begin to interact
+with it by setting filters and navigating between pages. As users
+interact with the report, these interactions are handled by direct
+communications between the report and the Power BI Service.
 
 <img src="ReadMe\media\image5.png" style="width:5.1039in;height:1.75628in" />
 
-## Setting Up This Sample Project
+## Setting Up This Sample in a Salesforce Development Environment
 
 In order to setup and run this sample, you need to install the following
 software.
