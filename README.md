@@ -1,8 +1,11 @@
 [SalesforceAppOwnsDataEmbedding](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/tree/main/SalesforceAppOwnsDataEmbedding/force-app/main/default/aura/powerBiReportAura)
 is a sample project which demonstrates how to implement App-Owns-Data
-embedding with Power BI reports using the Salesforce Developer
-Experience (SFDX) and the SFDX CLI. The architecture of this solution is
-built on top of an Apex class named
+embedding with Power BI reports using the [Salesforce Developer
+Experience
+(SFDX)](https://developer.salesforce.com/developer-centers/developer-experience/)
+and the [Salesforce
+CLI](https://developer.salesforce.com/tools/sfdxcli). The architecture
+of this solution is built on top of an Apex class named
 [PowerBiEmbedManager](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/blob/main/SalesforceAppOwnsDataEmbedding/force-app/main/default/classes/PowerBiEmbedManager.cls)
 which is programmed to interact with both Azure AD and the [Power BI
 REST API](https://docs.microsoft.com/en-us/rest/api/power-bi/) as shown
