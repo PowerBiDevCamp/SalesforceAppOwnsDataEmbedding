@@ -7,7 +7,7 @@ AD and the [Power BI REST
 API](https://docs.microsoft.com/en-us/rest/api/power-bi/) as shown in
 the following diagram.
 
-<img src="ReadMe\media\image1.png" style="width:4.25918in;height:1.81595in" />
+<img src="ReadMe\media\image1.png" style="width:3.13683in;height:1.33742in" />
 
 **PowerBiEmbedManager** implements [Client Credentials
 Flow](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow)
@@ -28,13 +28,13 @@ embedding.
 annotation making it accessible to both Lighting Aura components and
 Lightning web components running in the browser.
 
-<img src="ReadMe\media\image2.png" style="width:4.08589in;height:1.12328in" />
+<img src="ReadMe\media\image2.png" style="width:3in;height:0.77584in" />
 
 More text
 
 MOrex Text
 
-<img src="ReadMe\media\image3.png" style="width:3.36043in;height:1.45399in" />
+<img src="ReadMe\media\image3.png" style="width:2.42945in;height:1.05117in" />
 
 ## Setting Up This Sample Project
 
