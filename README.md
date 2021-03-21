@@ -23,8 +23,8 @@ Power BI REST API as service principal is a best practice for developing
 with App-Owns-Data embedding.
 
 **PowerBiEmbedManager** must call the Power BI REST API for two
-different reasons. First, it much acquire embedding data associated with
-a specific report ID such as the Embed Url. Second,
+different reasons. First, it much acquire embedding data such as the
+Embed Url associated with a specific report ID. Second,
 **PowerBiEmbedManager** must call the Power BI REST API to generate
 embed tokens which are required with App-Owns-Data embedding.
 
