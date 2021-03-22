@@ -1,1 +1,1 @@
-pandoc --extract-media ./ReadMe Readme.docx -t gfm -o Readme.md
+pandoc --extract-media ./Images/ReadMe Readme.docx -t gfm -o Readme.md
