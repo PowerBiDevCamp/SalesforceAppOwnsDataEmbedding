@@ -1,13 +1,12 @@
 # Create an Azure AD Application for App-Owns-Data Embedding
 
 Follow the steps in this document to create a new Azure AD application
-for the
-[**SalesforceAppOwnsDataEmbedding**](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/tree/main/SalesforceAppOwnsDataEmbedding/force-app/main/default/aura/powerBiReportAura)
-sample project. To complete these steps, you will require a Power BI
-environment in which you have a user account that has been configured as
-a Power BI Service admin. If you do not have a Power BI environment for
-testing, you can create one for free by following the steps in [Create a
-Development Environment for Power BI
+for the **SalesforceAppOwnsDataEmbedding** sample project. To complete
+these steps, you will require a Power BI environment in which you have a
+user account that has been configured as a Power BI Service admin. If
+you do not have a Power BI environment for testing, you can create one
+for free by following the steps in [Create a Development Environment for
+Power BI
 Embedding](https://github.com/PowerBiDevCamp/Camp-Sessions/raw/master/Create%20Power%20BI%20Development%20Environment.pdf).
 
 When you login to the Azure portal to create the new Azure AD
