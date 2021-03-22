@@ -25,12 +25,12 @@ organizational directory only**.
 
 <img src="CreateAzureAdApplication\media\image2.png" style="width:3.16949in;height:1.5117in" />
 
-In the **Redirect URI** section leave the default selection in the
-dropdown box to **Web** and leave the textbox to the right of the
-dropdown box empty. The reason for leaving this textbox empty is that
-you do not need to add a Redirect URI when acquiring app-only access
-tokens using Client Credentials Flow. Click the **Register** button to
-create the new Azure AD application.
+In the **Redirect URI** section leave the default selection of **Web**
+in the dropdown box and leave the textbox to the right of the dropdown
+box empty. The reason for leaving this textbox empty is that you do not
+need to add a Redirect URI when acquiring app-only access tokens using
+Client Credentials Flow. Click the **Register** button to create the new
+Azure AD application.
 
 <img src="CreateAzureAdApplication\media\image3.png" style="width:3.8983in;height:1.18104in" />
 
