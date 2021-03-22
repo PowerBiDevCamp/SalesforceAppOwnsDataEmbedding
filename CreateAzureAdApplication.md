@@ -18,7 +18,7 @@ as **Salesforce App-Owns-Data Sample App** and accept the default
 selection for **Supported account types** of **Accounts in this
 organizational directory only**.
 
-<img src="CreateAzureAdApplication\media\image2.png" style="width:4.43834in;height:2.11688in" />
+<img src="CreateAzureAdApplication\media\image2.png" style="width:3.16949in;height:1.5117in" />
 
 In the **Redirect URI** section leave the default selection in the
 dropdown box to **Web** and leave the textbox to the right of the
@@ -26,7 +26,7 @@ dropdown box empty. Note that you do not need to add a Redirect URI when
 acquiring app-only access tokens using Client Credentials Flow. Click
 the **Register** button to create the new Azure AD application.
 
-<img src="CreateAzureAdApplication\media\image3.png" style="width:5.89418in;height:1.78571in" />
+<img src="CreateAzureAdApplication\media\image3.png" style="width:3.8983in;height:1.18104in" />
 
 After creating a new Azure AD application in the Azure portal, you
 should see the Azure AD application overview page which displays the
@@ -34,13 +34,13 @@ should see the Azure AD application overview page which displays the
 *Client ID*. You will need to copy this Application ID and use it later
 to configure the project's support for Client Credentials Flow.
 
-<img src="CreateAzureAdApplication\media\image4.png" style="width:4.71429in;height:1.54622in" />
+<img src="CreateAzureAdApplication\media\image4.png" style="width:4.08244in;height:1.33898in" />
 
 Copy the application ID and paste it into a text document so you can use
 it later. Note that this is the ClientID value that will be used by
 **SalesforceAppOwnsDataEmbedding** project.
 
-<img src="CreateAzureAdApplication\media\image5.png" style="width:3.5in;height:0.92222in" />
+<img src="CreateAzureAdApplication\media\image5.png" style="width:4.24546in;height:1.11864in" />
 
 Next, you need to create a Client Secret for the application which will
 act as the application's password when it authenticates using Client
@@ -49,12 +49,12 @@ left navigation to move to the **Certificates & secrets** page. On the
 **Certificates & secrets** page, click the **New client secret** button
 as shown in the following screenshot.
 
-<img src="CreateAzureAdApplication\media\image6.png" style="width:6.5in;height:3.01944in" />
+<img src="CreateAzureAdApplication\media\image6.png" style="width:4.41525in;height:2.05102in" />
 
 In the **Add a client secret** dialog, add a text description such as
 Test Secret and then click the **Add** button.
 
-<img src="CreateAzureAdApplication\media\image7.png" style="width:4.4878in;height:1.57792in" />
+<img src="CreateAzureAdApplication\media\image7.png" style="width:3.22034in;height:1.13228in" />
 
 Once you have created the client secret, you should be able to see its
 **Value** in the **Client secrets** section.
@@ -88,7 +88,7 @@ menu and select the navigation command for the Admin portal.
 In the Power BI Admin portal, click the **Tenant settings** link on the
 left.
 
-<img src="CreateAzureAdApplication\media\image12.png" style="width:3.38326in;height:2.2193in" />
+<img src="CreateAzureAdApplication\media\image12.png" style="width:2.59322in;height:1.70106in" />
 
 Move down in the Developer settings section and expand the Allow service
 principals to use Power BI APIs section.
@@ -108,7 +108,7 @@ Change the setting to **Enabled** and place your cursor inside the
 You will see a notification indicating it may take up to 15 minutes
 until your tenant recognizes your configuration changes.
 
-<img src="CreateAzureAdApplication\media\image16.png" style="width:3.91776in;height:0.70182in" alt="Text Description automatically generated with medium confidence" />
+<img src="CreateAzureAdApplication\media\image16.png" style="width:5.19103in;height:0.92992in" alt="Text Description automatically generated with medium confidence" />
 
 ## Configure Service Principal Access to a Power BI Workspace
 
@@ -126,7 +126,7 @@ who has access to workspace resources.
 In the search box with the caption of Enter email address, type
 App-Owns-Data to find the Azure AD application.
 
-<img src="CreateAzureAdApplication\media\image18.png" style="width:4.3983in;height:2.09696in" />
+<img src="CreateAzureAdApplication\media\image18.png" style="width:2.71186in;height:1.29292in" />
 
 In the search box with the caption of Enter email address, type
 App-Owns-Data to find the Azure AD application.
@@ -137,12 +137,12 @@ Select the Azure AD application named App-Owns-Data Sample App. Select
 Admin in the dropdown menu to specify the level of access and then click
 the Add button.
 
-<img src="CreateAzureAdApplication\media\image20.png" style="width:3.74675in;height:1.82469in" />
+<img src="CreateAzureAdApplication\media\image20.png" style="width:3.20339in;height:1.56007in" />
 
 You should now be able to confirm that the App-Owns-Data Sample App has
 been configured as a workspace admin.
 
-<img src="CreateAzureAdApplication\media\image21.png" style="width:4.60152in;height:4.42208in" />
+<img src="CreateAzureAdApplication\media\image21.png" style="width:3.2011in;height:3.07627in" />
 
 Close the Access pane.
 
