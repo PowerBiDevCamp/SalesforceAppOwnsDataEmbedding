@@ -8,7 +8,7 @@ environment in which you have a user account that has been configured as
 a Power BI Service admin. If you do not have a Power BI environment for
 testing, you can create one for free by following the steps in [Create a
 Development Environment for Power BI
-Embedding](https://github.com/PowerBiDevCamp/Camp-Sessions/blob/master/Create%20Power%20BI%20Development%20Environment.pdf).
+Embedding](https://github.com/PowerBiDevCamp/Camp-Sessions/raw/master/Create%20Power%20BI%20Development%20Environment.pdf).
 
 When you login to the Azure portal to create the new Azure AD
 application, make sure you log in using a user account in the same
