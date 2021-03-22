@@ -123,38 +123,50 @@ until your tenant recognizes your configuration changes.
 
 ## Configure Service Principal Access to a Power BI Workspace
 
-Add the Azure AD service principal for the Azure AD application to a
-Power BI workspace as an administrator.
+It is important to understand that a service principal has no default
+access to any workspace. Instead, you must add the service principal for
+the Azure AD application as a workspace member to any Power BI workspace
+that the service principal needs to access. Also note that when adding a
+service principal to a Power BI workspace, you must as the service
+principal in the workspace role of either **Admin** or **Member**. Other
+workspace roles such as **Contributor** and **Visitor** are not support
+for App-Owns-Data embedding with a service principal.
 
-Click the Dev Camp Lab workspace in the left navigation to display the
-workspace summary page.
-
-Click the Access link to open the Access pane where you can configure
-who has access to workspace resources.
+Navigate to the Power BI workspace which contains the report you'd like
+to embed in your testing. Click the workspace name in the left
+navigation to display the workspace summary page. Next, click the
+**Access** link to open the **Access** pane where you can configure who
+has access to workspace resources.
 
 <img src="CreateAzureAdApplication\media\image17.png" style="width:6.5in;height:2.18194in" />
 
-In the search box with the caption of Enter email address, type
-App-Owns-Data to find the Azure AD application.
+On the **Access** pane, locate the search box with the caption of
+**Enter email address**.
 
 <img src="CreateAzureAdApplication\media\image18.png" style="width:2.71186in;height:1.29292in" />
 
-In the search box with the caption of Enter email address, type
-App-Owns-Data to find the Azure AD application.
+In the search box with the caption of **Enter email address**, type
+*Salesforce* to find the Azure AD application.
 
 <img src="CreateAzureAdApplication\media\image19.png" style="width:3.57291in;height:1.24675in" />
 
-Select the Azure AD application named App-Owns-Data Sample App. Select
-Admin in the dropdown menu to specify the level of access and then click
-the Add button.
+Select the Azure AD application you created earlier. Select **Admin** in
+the dropdown menu to specify the workspace role and then click the
+**Add** button.
 
 <img src="CreateAzureAdApplication\media\image20.png" style="width:3.20339in;height:1.56007in" />
 
-You should now be able to confirm that the App-Owns-Data Sample App has
-been configured as a workspace admin.
+You should now be able to confirm that the Azure AD application you
+created has been configured as a workspace admin.
 
 <img src="CreateAzureAdApplication\media\image21.png" style="width:3.2011in;height:3.07627in" />
 
-Close the Access pane.
+If you want the service principal to be able to embed reports for any
+other Power BI workspace in the same tenant, follow the same steps to
+add the service principal in the workspace role of Admin in those
+workspaces as well. At this point you have successfully created and
+configure the new Azure AD application for App-Owns-Data embedding.
+Remember you will need the Client ID and the Client Secret to configure
+**SalesforceAppOwnsDataEmbedding** sample project.
 
 <img src="CreateAzureAdApplication\media\image10.png" style="width:4.11039in;height:1.47225in" alt="Graphical user interface, text, application, email Description automatically generated" />
