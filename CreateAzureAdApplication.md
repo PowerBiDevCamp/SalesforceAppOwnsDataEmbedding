@@ -83,22 +83,22 @@ configure it with the Power BI Apps security group. Navigate to the
 Power BI portal at <https://app.powerbi.com>. Drop down the Settings
 menu and select the navigation command for the Admin portal.
 
-<img src="CreateAzureAdApplication\media\image11.png" style="width:6.04386in;height:1.11106in" alt="Graphical user interface, text Description automatically generated" />
+<img src="CreateAzureAdApplication\media\image11.png" style="width:7.5in;height:1.51736in" />
 
 In the Power BI Admin portal, click the **Tenant settings** link on the
 left.
 
-<img src="CreateAzureAdApplication\media\image12.png" style="width:2.54874in;height:1.63706in" alt="Graphical user interface, application Description automatically generated" />
+<img src="CreateAzureAdApplication\media\image12.png" style="width:3.38326in;height:2.2193in" />
 
 Move down in the Developer settings section and expand the Allow service
 principals to use Power BI APIs section.
 
-<img src="CreateAzureAdApplication\media\image13.png" style="width:3.64697in;height:2.21601in" alt="Graphical user interface, application, Teams Description automatically generated" />
+<img src="CreateAzureAdApplication\media\image13.png" style="width:4.89444in;height:3.01736in" />
 
 Note that the Allow service principals to use Power BI APIs setting is
 initially set to Disabled.
 
-<img src="CreateAzureAdApplication\media\image14.png" style="width:2.83882in;height:1.31524in" alt="Graphical user interface, text, application, email Description automatically generated" />
+<img src="CreateAzureAdApplication\media\image14.png" style="width:4.69514in;height:2.27986in" />
 
 Change the setting to **Enabled** and place your cursor inside the
 **Apply to: Specific security groups** textbox.
