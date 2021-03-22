@@ -152,9 +152,9 @@ In the search box with the caption of **Enter email address**, type
 
 <img src="CreateAzureAdApplication\media\image19.png" style="width:3.57291in;height:1.24675in" />
 
-Select the Azure AD application you created earlier. Select **Admin** in
-the dropdown menu to specify the workspace role and then click the
-**Add** button.
+Select the Azure AD application you created earlier. Next, select
+**Admin** in the dropdown menu to specify the workspace role and then
+click the **Add** button.
 
 <img src="CreateAzureAdApplication\media\image20.png" style="width:3.20339in;height:1.56007in" />
 
