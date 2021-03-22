@@ -125,28 +125,37 @@ REST API.
 
 <img src="Images\ReadMe\media\image6.png" style="width:3.42857in;height:1.12457in" alt="Graphical user interface, text, application, email Description automatically generated" />
 
-After adding the remote site settings, the next step is to create a new
-Custom Metadata Type.
+After adding the remote site settings, the next step is to create and
+configure a new Azure AD application to support calling the Power BI
+Service API. You can create the required Azure AD by following the steps
+in [**Create an Azure AD Application for App-Owns-Data
+Embedding**](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/blob/main/Create%20an%20Azure%20AD%20Application%20for%20App-Owns-Data%20Embedding.md).
+Once you have completed the steps to create and configure the new Azure
+AD application, you should have a Client ID and a Client Secret that you
+will need in the next step when you create a Create Custom Metadata Type
+to store the client credentials.
+
+<img src="Images\ReadMe\media\image7.png" style="width:3.28333in;height:1.17602in" alt="Graphical user interface, text, application, email Description automatically generated" />
 
 Create Custom Metadata Types with auth settings
 
-<img src="Images\ReadMe\media\image7.png" style="width:3.57506in;height:1.46104in" alt="Graphical user interface, text, application, email Description automatically generated" />
+<img src="Images\ReadMe\media\image8.png" style="width:3.57506in;height:1.46104in" alt="Graphical user interface, text, application, email Description automatically generated" />
 
 This is placeholder text.
 
-<img src="Images\ReadMe\media\image8.png" style="width:4.78497in;height:1.07143in" alt="Graphical user interface, text, application Description automatically generated" />
+<img src="Images\ReadMe\media\image9.png" style="width:4.78497in;height:1.07143in" alt="Graphical user interface, text, application Description automatically generated" />
 
 This is placeholder text.
 
-<img src="Images\ReadMe\media\image9.png" style="width:3.80102in;height:1.66234in" alt="Graphical user interface, application Description automatically generated" />
+<img src="Images\ReadMe\media\image10.png" style="width:3.80102in;height:1.66234in" alt="Graphical user interface, application Description automatically generated" />
 
 This is placeholder text.
 
-<img src="Images\ReadMe\media\image10.png" style="width:4.11048in;height:1.27273in" alt="Graphical user interface, application Description automatically generated" />
+<img src="Images\ReadMe\media\image11.png" style="width:4.11048in;height:1.27273in" alt="Graphical user interface, application Description automatically generated" />
 
 Upload powerbi.js as a Resource
 
-<img src="Images\ReadMe\media\image11.png" style="width:4.07143in;height:1.37871in" alt="Graphical user interface, text, application, email Description automatically generated" />
+<img src="Images\ReadMe\media\image12.png" style="width:4.07143in;height:1.37871in" alt="Graphical user interface, text, application, email Description automatically generated" />
 
 In order to setup and run this sample, you need to install the following
 software.
@@ -158,7 +167,7 @@ software.
 When you have installed Visual Studio Code, you must install a Visual
 Studio Code extension the Salesforce Expansion Pack.
 
-<img src="Images\ReadMe\media\image12.png" style="width:3.59167in;height:1.98739in" />
+<img src="Images\ReadMe\media\image13.png" style="width:3.59167in;height:1.98739in" />
 
 Great blog article in 2017. But so much has changed.
 
@@ -166,7 +175,7 @@ So much has changed.
 
 -   Service principal can be used for App-Owns-Data embedding
 
-<img src="Images\ReadMe\media\image13.png" style="width:5.025in;height:1.93398in" />
+<img src="Images\ReadMe\media\image14.png" style="width:5.025in;height:1.93398in" />
 
 Here is the GitHub repo with the sample code discussed in this article.
 This code is provided in an SFDX project. This is not an introduction to
