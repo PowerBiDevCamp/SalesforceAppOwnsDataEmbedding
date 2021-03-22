@@ -125,13 +125,14 @@ until your tenant recognizes your configuration changes.
 ## Configure Service Principal Access to a Power BI Workspace
 
 It is important to understand that a service principal has no default
-access to any workspace. Instead, you must add the service principal for
-the Azure AD application as a workspace member to any Power BI workspace
-that the service principal needs to access. Also note that when adding a
-service principal to a Power BI workspace, you must as the service
-principal in the workspace role of either **Admin** or **Member**. Other
-workspace roles such as **Contributor** and **Visitor** are not support
-for App-Owns-Data embedding with a service principal.
+access to any workspace in a Power BI tenant. Instead, you must add the
+service principal for the Azure AD application as a workspace member to
+any Power BI workspace that the service principal needs to access. Also
+note that when adding a service principal to a Power BI workspace, you
+must as the service principal in the workspace role of either **Admin**
+or **Member**. Other workspace roles such as **Contributor** and
+**Visitor** are not support for App-Owns-Data embedding with a service
+principal.
 
 Navigate to the Power BI workspace which contains the report you'd like
 to embed in your testing. Click the workspace name in the left
