@@ -1,0 +1,1 @@
+pandoc --extract-media ./CreateAzureAdApplication CreateAzureAdApplication.docx -t gfm -o CreateAzureAdApplication.md
