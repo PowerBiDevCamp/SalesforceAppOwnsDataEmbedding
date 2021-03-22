@@ -87,10 +87,11 @@ be tracked in the Salesforce environment using a Custom Metadata Type.
 
 ## Configure Service Principal Support in the Power BI Tenant
 
-Enable the Allow service principals to use Power BI APIs setting and
-configure it with the Power BI Apps security group. Navigate to the
-Power BI portal at <https://app.powerbi.com>. Drop down the Settings
-menu and select the navigation command for the Admin portal.
+Next, you need you enable a tenant-level setting for Power BI named
+**Allow service principals to use Power BI APIs**. Navigate to the Power
+BI Service portal at <https://app.powerbi.com>. Drop down the
+**Settings** menu and select the navigation command for the **Admin
+portal**.
 
 <img src="CreateAzureAdApplication\media\image11.png" style="width:7.5in;height:1.51736in" />
 
