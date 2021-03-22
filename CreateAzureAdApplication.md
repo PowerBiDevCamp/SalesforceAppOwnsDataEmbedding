@@ -36,9 +36,10 @@ Azure AD application.
 
 After creating a new Azure AD application in the Azure portal, you
 should see the Azure AD application overview page which displays the
-**Application ID**. Note that the *Application ID* is often called the
-*Client ID*. You will need to copy this Application ID and use it later
-to configure the project's support for Client Credentials Flow.
+**Application ID**. Note that the ***Application ID*** is often called
+the ***Client ID***, so don't let this confuse you. You will need to
+copy this Application ID and store it so you can use it later to
+configure the project's support for Client Credentials Flow.
 
 <img src="CreateAzureAdApplication\media\image4.png" style="width:4.08244in;height:1.33898in" />
 
