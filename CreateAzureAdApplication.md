@@ -159,7 +159,8 @@ click the **Add** button.
 <img src="CreateAzureAdApplication\media\image20.png" style="width:3.20339in;height:1.56007in" />
 
 You should now be able to confirm that the Azure AD application you
-created has been configured as a workspace admin.
+created earlier has been configured as a **Admin** member of the
+workspace.
 
 <img src="CreateAzureAdApplication\media\image21.png" style="width:3.2011in;height:3.07627in" />
 
