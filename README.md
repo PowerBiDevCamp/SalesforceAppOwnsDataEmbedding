@@ -27,7 +27,7 @@ which is programmed to interact with both Azure AD and the [**Power BI
 REST API**](https://docs.microsoft.com/en-us/rest/api/power-bi/) as
 shown in the following diagram.
 
-<img src="Images\ReadMe\media\image1.png" style="width:6.39662in;height:2.72727in" />
+<img src="Images\ReadMe\media\image1.png" style="width:200px;" />
 
 **PowerBiEmbedManager** implements [**Client Credentials
 Flow**](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow)
