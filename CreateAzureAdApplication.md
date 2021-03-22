@@ -126,16 +126,16 @@ who has access to workspace resources.
 In the search box with the caption of Enter email address, type
 App-Owns-Data to find the Azure AD application.
 
-<img src="CreateAzureAdApplication\media\image18.png" style="width:3.11687in;height:1.46618in" alt="Graphical user interface, application Description automatically generated" />
+<img src="CreateAzureAdApplication\media\image18.png" style="width:4.3983in;height:2.09696in" />
 
-Select the Azure AD application named App-Owns-Data Sample App.
+In the search box with the caption of Enter email address, type
+App-Owns-Data to find the Azure AD application.
 
 <img src="CreateAzureAdApplication\media\image19.png" style="width:3.57291in;height:1.24675in" />
 
-xx
-
-Select Admin in the dropdown menu to specify the level of access and
-then click the Add button.
+Select the Azure AD application named App-Owns-Data Sample App. Select
+Admin in the dropdown menu to specify the level of access and then click
+the Add button.
 
 <img src="CreateAzureAdApplication\media\image20.png" style="width:3.74675in;height:1.82469in" />
 
