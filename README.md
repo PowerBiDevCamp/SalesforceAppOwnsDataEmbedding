@@ -248,20 +248,16 @@ retrieve these field values from this record.
 
 Here
 
-\`\`\`Apex
+```Apex
 
 // get auth settings from custom metadata type record
 
 Power\_BI\_Auth\_Setting\_\_mdt authSetting =
 Power\_BI\_Auth\_Setting\_\_mdt.getInstance('PowerBiApp');
-
 string TenantId = authSetting.TenantId\_\_c;
-
 string ClientId = authSetting.ClientId\_\_c;
-
 string ClientSecret = authSetting.ClientSecret\_\_c;
-
-\`\`\`
+```
 
 ### Upload powerbi.js as a Static Resource
 
