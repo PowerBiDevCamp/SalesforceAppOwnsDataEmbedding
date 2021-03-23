@@ -248,9 +248,9 @@ retrieve these field values from this record.
 <img src="Images\ReadMe\media\image16.png" style="width:4.11048in;height:1.27273in" alt="Graphical user interface, application Description automatically generated" />
 
 Now that you have create a custom metadata type and an associated record
-to store client credentials, you should understand the benefits. It's
-very easy to access the record of a custom metadata type when
-programming in Apex. You can now write the following Apex code to
+to store client credentials, it's time for you to see one of the key
+benefits. It's very easy to access a record for a custom metadata type
+when programming in Apex. You can now write the following Apex code to
 retrieve the client credentials when they are needed for authentication.
 
 // get auth settings from custom metadata type record
@@ -264,9 +264,10 @@ string ClientId = authSetting.ClientId\_\_c;
 
 string ClientSecret = authSetting.ClientSecret\_\_c;
 
-Now there is just one more task remaining in the set up process. This is
-you must upload the source file for the Power BI JavaScript API
-(powerbi.js) into your Salesforce organization as a static resource.
+Now there is just one more task remaining in the set up process. In the
+final step for setting up the environment, you will upload the source
+file for the Power BI JavaScript API into your Salesforce organization
+as a static resource.
 
 ### Upload powerbi.js as a Static Resource
 
