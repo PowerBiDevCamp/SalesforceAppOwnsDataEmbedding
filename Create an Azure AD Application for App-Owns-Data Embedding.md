@@ -169,7 +169,7 @@ other Power BI workspace in the same tenant, follow the same steps to
 add the service principal in the workspace role of Admin in those
 workspaces as well. At this point you have successfully created and
 configure the new Azure AD application for App-Owns-Data embedding.
-Remember you will need the Client ID and the Client Secret to configure
+Remember you will need the **Client ID**, **Client Secret** and **Tenant ID** to configure
 **SalesforceAppOwnsDataEmbedding** sample project.
 
 <img src="Images\CreateAzureAdApplication\media\image10.png" style="width:4.11039in;height:1.47225in" alt="Graphical user interface, text, application, email Description automatically generated" />
