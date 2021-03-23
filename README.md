@@ -161,8 +161,11 @@ Custom Metadata Type** page.
 <img src="Images\ReadMe\media\image8.png" style="width:5.43333in;height:2.39067in" />
 
 In the **New Custom Metadata Type** page, enter the following values.
+
 -   **Label** = **Power BI Auth Setting**
+
 -   **Plural Label** = **Power BI Auth Settings**
+
 -   **Object Name** = **Power\_BI\_Auth\_Setting**
 
 The **New Custom Metadata Type** page should now match the following
@@ -268,12 +271,14 @@ as a static resource.
 
 ### Upload powerbi.js as a Static Resource
 
-First, you must download a local copy of **powerbi.js** which is the
-main JavaScript source file for the Power BI JavaScript API. This can be
-done using [this
+Before you can create the static resource, you first must download a
+local copy of **powerbi.js** which is the JavaScript source file with
+the Power BI JavaScript API. You can download a local copy of
+**powerbi.js** using [this
 ink](https://raw.githubusercontent.com/microsoft/PowerBI-JavaScript/master/dist/powerbi.js).
-Once you have downloaded a local copy, you can then upload it to your
-Salesforce organization as a static resource.
+Once you have downloaded a local copy, you can move to the next step
+which is to upload **powerbi.js** to your Salesforce organization as a
+static resource.
 
 Start by navigating to the Salesforce organization **Setup page** and
 searching for the **Static Resources** page. While it's easy to miss,
@@ -282,13 +287,13 @@ create a new static resource.
 
 <img src="Images\ReadMe\media\image17.png" style="width:4.07083in;height:1.55732in" />
 
-Give the new static resource a **Name** of **powerbijs**. Upload the
-source file named **powerbi.js** by clicking the **Choose File** button
-and then locating the file in the **File Open** dialog. Set the **Cache
-Control** to **Public** to enable sharing and faster load times for this
-JavaScript library file in the browser. When you have entered all the
-data, click **Save** to upload **powerbi.js** and make it available as a
-new static resource named **powerbijs**.
+Give the new static resource a **Name** of **powerbijs**. Configure the
+**File** setting by clicking the **Choose File** button and then
+locating the local copy of **powerbi.js** in the **File Open** dialog.
+Set the **Cache Control** to **Public** to enable sharing and faster
+load times for this JavaScript library file in the browser. When you
+have entered all the data, click **Save** to upload **powerbi.js** and
+make it available as a new static resource named **powerbijs**.
 
 <img src="Images\ReadMe\media\image18.png" style="width:5.85088in;height:1.85664in" />
 
