@@ -156,7 +156,7 @@ Auth Setting** and an **Object Name** of **Power\_BI\_Auth\_Setting**.
 
 <img src="Images\ReadMe\media\image9.png" style="width:3.97626in;height:1.625in" alt="Graphical user interface, text, application, email Description automatically generated" />
 
-This is placeholder text
+This is placeholder text cccccc
 
 <img src="Images\ReadMe\media\image10.png" style="width:6.7in;height:1.04222in" />
 
