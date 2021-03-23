@@ -91,7 +91,7 @@ communications between the report and the Power BI Service.
 
 <img src="Images\ReadMe\media\image5.png" style="width:5.77273in;height:1.98643in" />
 
-## Setting Up This Sample Project
+## Setting Up the Test Environment
 
 In order to set up and test this sample project, you'll need a Power BI
 report in a Microsoft 365 tenant in which you can create a new Azure AD
@@ -246,7 +246,11 @@ retrieve these field values from this record.
 
 <img src="Images\ReadMe\media\image16.png" style="width:4.11048in;height:1.27273in" alt="Graphical user interface, application Description automatically generated" />
 
-Here
+Now that you have create a custom metadata type and an associated record
+to store client credentials, you should understand the benefits. It's
+very easy to access the record of a custom metadata type when
+programming in Apex. You can now write the following Apex code to
+retrieve the client credentials when they are needed for authentication.
 
 // get auth settings from custom metadata type record
 
@@ -259,13 +263,44 @@ string ClientId = authSetting.ClientId\_\_c;
 
 string ClientSecret = authSetting.ClientSecret\_\_c;
 
+Now there is just one more task remaining in the set up process. This is
+you must upload the source file for the Power BI JavaScript API
+(powerbi.js) into your Salesforce organization as a static resource.
+
 ### Upload powerbi.js as a Static Resource
 
-Upload powerbi.js as a Resource
+First, you must download a local copy of **powerbi.js** which is the
+main JavaScript source file for the Power BI JavaScript API. This can be
+done using [this
+ink](https://raw.githubusercontent.com/microsoft/PowerBI-JavaScript/master/dist/powerbi.js).
+Once you have downloaded a local copy, you can then upload it to your
+Salesforce organization as a static resource.
 
-<img src="Images\ReadMe\media\image17.png" style="width:4.07143in;height:1.37871in" alt="Graphical user interface, text, application, email Description automatically generated" />
+Start by navigating to the Salesforce organization **Setup page** and
+searching for the **Static Resources** page. While it's easy to miss,
+there is a **New** button on this page. Click the **New** button to
+create a new static resource.
 
-## Set up the Development Project
+<img src="Images\ReadMe\media\image17.png" style="width:4.07083in;height:1.55732in" />
+
+Give the new static resource a **Name** of **powerbijs**. Upload the
+source file named **powerbi.js** by clicking the **Choose File** button
+and then locating the file in the **File Open** dialog. Set the **Cache
+Control** to **Public** to enable sharing and faster load times for this
+JavaScript library file in the browser. When you have entered all the
+data, click **Save** to upload **powerbi.js** and make it available as a
+new static resource named **powerbijs**.
+
+<img src="Images\ReadMe\media\image18.png" style="width:5.85088in;height:1.85664in" />
+
+When you return to the **Static Resources** page, you should be able to
+verify that the static resource has been created and that it's name is
+**powerbijs**. This name will be important because it must be used by
+any Lightning component that needs to load this library.
+
+<img src="Images\ReadMe\media\image19.png" style="width:4.07143in;height:1.37871in" alt="Graphical user interface, text, application, email Description automatically generated" />
+
+## Setting Up the Developer Workstation
 
 In order to setup and run this sample, you need to install the following
 software.
@@ -277,15 +312,19 @@ software.
 When you have installed Visual Studio Code, you must install a Visual
 Studio Code extension the Salesforce Expansion Pack.
 
-<img src="Images\ReadMe\media\image18.png" style="width:3.59167in;height:1.98739in" />
+<img src="Images\ReadMe\media\image20.png" style="width:3.59167in;height:1.98739in" />
 
-Great blog article in 2017. But so much has changed.
+References
 
-So much has changed.
+-   [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
 
--   Service principal can be used for App-Owns-Data embedding
+-   [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
 
-<img src="Images\ReadMe\media\image19.png" style="width:5.025in;height:1.93398in" />
+-   [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
+
+-   [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+
+### Download the Project Source Code
 
 Here is the GitHub repo with the sample code discussed in this article.
 This code is provided in an SFDX project. This is not an introduction to
@@ -306,27 +345,24 @@ Here are the Salesforce features
 
 -   Lightning Web Component
 
-# Getting Started with the Sample
+### Project Structure
 
-## Salesforce DX Project: Next Steps
+What's inside
 
-Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
+<img src="Images\ReadMe\media\image21.png" style="width:5.025in;height:1.93398in" />
 
-## How Do You Plan to Deploy Your Changes?
+### Apex Class Code Walkthrough
 
-Do you want to deploy a set of changes, or create a self-contained application? Choose a \[development model\](<u>https://developer.salesforce.com/tools/vscode/en/user-guide/development-models</u>).
+xxxxxx
 
-**Configure Your Salesforce DX Project**
+### Lightning Aura Component Walkthrough
 
-The **sfdx-project.json** file
-contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the *\_Salesforce DX Developer Guide\_* for details about this file.
+xxxxxx
 
-**Read All About It**
+### Lightning Web Component Walkthrough
 
--   [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
+Xxxxxxeb
 
--   [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
+### The Tip of an Iceberg
 
--   [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
-
--   [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
+xxx
