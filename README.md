@@ -152,11 +152,9 @@ The next step is to create a custom metadata type that will be used to
 track the client credentials. More specifically, the custom metadata
 type will be designed to track a **Client ID**, **Client Secret** and
 **Tenant ID** that are required to authenticate with Azure AD as a
-service principal.
-
-Start by navigating to the Salesforce organization **Setup page** and
-searching for the **Custom Metadata Types** page. Click the **New Custom
-Metadata Type** button.
+service principal. Start by navigating to the Salesforce organization
+**Setup page** and searching for the **Custom Metadata Types** page.
+Click the **New Custom Metadata Type** button.
 
 <img src="Images\ReadMe\media\image8.png" style="width:5.43333in;height:2.39067in" />
 
