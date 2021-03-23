@@ -108,9 +108,9 @@ Once you have a Salesforce organization for testing, you will need to
 complete the following setup tasks to configure the environment for the
 **SalesforceAppOwnsDataEmbedding** project.
 
--   Add remote site settings for Azure AD and Power BI Service API
+-   Add remote site settings for Azure AD and Power BI REST API
 
--   Create an Azure AD application to call the Power Service API
+-   Create an Azure AD application to call the Power BI REST API
 
 -   Create a custom metadata type to store client credentials for the
     Azure AD application
@@ -134,8 +134,8 @@ REST API.
 
 After adding the remote site settings, the next step is to create and
 configure a new Azure AD application to support calling the Power BI
-Service API. You can create the required Azure AD by following the steps
-in [**Create an Azure AD Application for App-Owns-Data
+REST API. You can create the required Azure AD by following the steps in
+[**Create an Azure AD Application for App-Owns-Data
 Embedding**](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/blob/main/Create%20an%20Azure%20AD%20Application%20for%20App-Owns-Data%20Embedding.md).
 Once you have completed the steps to create and configure the new Azure
 AD application, you should have a **Client ID**, **Client Secret** and
