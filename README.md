@@ -113,7 +113,7 @@ complete the following three tasks to configure the environment for the
 
 -   Create an Azure AD application to call the Power Service API
 
--   Create a Custom Metadata Type to store client credentials for the
+-   Create a custom metadata type to store client credentials for the
     Azure AD application
 
 -   Create a static resource by uploading a copy of the Power BI
@@ -141,7 +141,7 @@ Embedding**](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/bl
 Once you have completed the steps to create and configure the new Azure
 AD application, you should have a **Client ID**, **Client Secret** and
 **Tenant ID** that you will need in the next step when you create a
-Create Custom Metadata Type to store the client credentials.
+Create custom metadata type to store the client credentials.
 
 <img src="Images\ReadMe\media\image7.png" style="width:3.69987in;height:2.20859in" />
 
@@ -171,30 +171,31 @@ Below in the **New Custom Metadata Type** dialog there is a
 value of **All Apex code and APIs can use the type and it’s visible in
 Setup**. This is the setting you want when testing a POC application or
 working in a development environment. However, it's common to change
-this setting for a Custom Metadata Type in a production environment to
-store sensitive data like a Client Secret in a secure and manageable
-fashion. Click the **Save** button to create the new Custom Metadata
-Type.
+this setting for a custom metadata type in a production environment to
+store sensitive data like a Client Secret in a more secure and encrypted
+fashion. Click the **Save** button to create the new custom metadata
+type.
 
 <img src="Images\ReadMe\media\image10.png" style="width:6.7in;height:1.04222in" />
 
-A very valuable aspect of creating a Custom Metadata Type is that it
+A very valuable aspect of creating a custom metadata type is that it
 becomes an actual type for the Apex programming language. You can
 determine what the type name will be by looking at the **API Name**
-property which is **Power\_BI\_Auth\_Setting\_\_mdt**. You can see that
-the **API Name** is created by taking the **Object Name** you provided
-and appending **\_\_mdt** at the end.
+property which is **Power\_BI\_Auth\_Setting\_\_mdt** for the new type
+you've just been created. You can see that the **API Name** is created
+by taking the **Object Name** you provided and appending **\_\_mdt** at
+the end.
 
 <img src="Images\ReadMe\media\image11.png" style="width:4.33333in;height:2.33333in" />
 
-After you have initially created the new Custom Metadata Type, you must
+After you have initially created the new custom metadata type, you must
 add custom fields for the Azure AD application's Client ID, Client
 Secret the Tenant ID. Click the **New** button in the **Custom Fields**
 section to begin adding fields.
 
 <img src="Images\ReadMe\media\image12.png" style="width:6.01719in;height:1.11043in" />
 
-Create the following three new Text fields.
+Create the following three new custom fields.
 
 -   Create a new **Text** field named **ClientId** with unique values
     and a max of 36 characters
@@ -207,36 +208,60 @@ Create the following three new Text fields.
 
 <img src="Images\ReadMe\media\image13.png" style="width:6.00029in;height:1.34356in" alt="Graphical user interface, text, application Description automatically generated" />
 
-Note that these custom fields will be added as public fields on the type
-named **Power\_BI\_Auth\_Setting\_\_mdt**. The **API Name** values
-created for these fields will be **ClientId\_\_c**,
+Note that these custom fields will be added as public fields to the
+custom metadata type named **Power\_BI\_Auth\_Setting\_\_mdt**. The
+**API Name** values created for these fields will be **ClientId\_\_c**,
 **ClientSecret\_\_c** and **TenantId\_\_c**.
 
 You should take note that there is code in the Apex class named
 **[PowerBiEmbedManager](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/blob/main/SalesforceAppOwnsDataEmbedding/force-app/main/default/classes/PowerBiEmbedManager.cls)**
-which uses the **API Name** of this Custom Metadata Type and it custom
+which uses the **API Name** of this custom metadata type and it custom
 fields to retrieve a Client ID, Client Secret and Tenant ID values when
 using client credentials flow.
 
-You are now done creating the Custom Metadata Type. Return back to the
-**Custom Metadata Types** page. You should see a new entry for the new
-Custom Metadata Type you've just created with a Label named
-**Power\_BI\_AUTH\_SETTING**.
+At this point you have created the custom metadata type. Next, you are
+going to create a new record using the custom metadata type to track a
+set of client credentials for testing.
 
-At this point you have created the Custom Metadata Type. Now you are
-going to create a record using the Custom Metadata Type to track a set
-of client credentials for testing. Click on the Manage Records button on
-the **Custom Metadata Types** page to create a new record.
+Return back to the **Custom Metadata Types** page. You should see a new
+entry for the new custom metadata type with a Label value of
+**Power\_BI\_AUTH\_SETTING**. Click on the **Manage Records** button to
+create a new record.
 
 <img src="Images\ReadMe\media\image14.png" style="width:4.81667in;height:1.86489in" />
 
-x
+You should now see an entry form where you can enter values for the
+**ClientId**, **ClientSecret** and **TenantId**. Enter a value of
+**PowerBiApp** for both the **Label** and the **Power BI Auth Setting
+Name**. Enter the values you collected earlier for the **ClientId**,
+**ClientSecret** and **TenantId**. When you are done, click **Save** to
+create the new record with the client credentials.
 
-<img src="Images\ReadMe\media\image15.png" style="width:3.80102in;height:1.66234in" alt="Graphical user interface, application Description automatically generated" />
+<img src="Images\ReadMe\media\image15.png" style="width:4.81667in;height:2.34654in" />
 
-This is placeholder text.
+When you return back to the **Power BI Auth Settings** page, you can see
+that the new record has a **Power BI Auth Settings Name** of
+**PowerBiApp**. You will need this value in the Apex code that needs to
+retrieve these field values from this record.
 
 <img src="Images\ReadMe\media\image16.png" style="width:4.11048in;height:1.27273in" alt="Graphical user interface, application Description automatically generated" />
+
+Here
+
+\`\`\`Apex
+
+// get auth settings from custom metadata type record
+
+Power\_BI\_Auth\_Setting\_\_mdt authSetting =
+Power\_BI\_Auth\_Setting\_\_mdt.getInstance('PowerBiApp');
+
+string TenantId = authSetting.TenantId\_\_c;
+
+string ClientId = authSetting.ClientId\_\_c;
+
+string ClientSecret = authSetting.ClientSecret\_\_c;
+
+\`\`\`
 
 ### Upload powerbi.js as a Static Resource
 
