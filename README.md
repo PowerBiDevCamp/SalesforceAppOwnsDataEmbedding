@@ -141,8 +141,8 @@ Embedding**](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/bl
 
 Once you have completed the steps to create and configure the new Azure
 AD application, you should have a **Client ID**, **Client Secret** and
-**Tenant ID** that you will need in the next step when you create a
-Create custom metadata type to store the client credentials.
+**Tenant ID** that you will need in the next step where you will create
+a custom metadata type to store the client credentials.
 
 <img src="Images\ReadMe\media\image7.png" style="width:3.69987in;height:2.20859in" />
 
