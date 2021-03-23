@@ -1,9 +1,9 @@
 # Salesforce App-Owns-Data Embedding Sample
 
-[**SalesforceAppOwnsDataEmbedding**](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/tree/main/SalesforceAppOwnsDataEmbedding/force-app/main/default/aura/powerBiReportAura)
-is a sample project which demonstrates how to implement App-Owns-Data
-embedding with Power BI reports. This project has been created using the
-[**Salesforce Developer Experience
+**SalesforceAppOwnsDataEmbedding** is a sample project which
+demonstrates how to implement App-Owns-Data embedding with Power BI
+reports. This project has been created using the [**Salesforce Developer
+Experience
 (SFDX)**](https://developer.salesforce.com/developer-centers/developer-experience/)
 and the [**Salesforce
 CLI**](https://developer.salesforce.com/tools/sfdxcli). The goal of this
@@ -27,7 +27,7 @@ which is programmed to interact with both Azure AD and the [**Power BI
 REST API**](https://docs.microsoft.com/en-us/rest/api/power-bi/) as
 shown in the following diagram.
 
-<img src="Images\ReadMe\media\image1.png" />
+<img src="Images\ReadMe\media\image1.png" style="width:6.39662in;height:2.72727in" />
 
 **PowerBiEmbedManager** implements [**Client Credentials
 Flow**](https://docs.microsoft.com/en-us/azure/active-directory/develop/v2-oauth2-client-creds-grant-flow)
@@ -70,7 +70,7 @@ passed as parameters when the component calls
 responds to this remote function call by returning the embedding data
 and the embed token which will be used to embed a report in the browser.
 
-<img src="Images\ReadMe\media\image3.png" style="width:6.62873in;height:1.71428in" />
+<img src="Images\ReadMe\media\image3.png" style="width:7.5in;height:1.88333in" />
 
 Once the **powerBiReportAura** component has successfully called
 **getEmbeddingDataForReport**, it has the embedding data and the embed
@@ -115,6 +115,8 @@ complete the following three tasks to configure the environment for the
 -   Create a static resource by uploading a copy of the Power BI
     JavaScript API (powerbi.js)
 
+### Add Remote Site Settings
+
 Start by navigating to the Salesforce organization **Setup page** and
 searching for the **Remote Site Settings** page. Use the Remote Site
 Setting to add remote site settings for
@@ -124,6 +126,8 @@ the Apex class can execute HTTP requests to Azure AD and the Power BI
 REST API.
 
 <img src="Images\ReadMe\media\image6.png" style="width:3.42857in;height:1.12457in" alt="Graphical user interface, text, application, email Description automatically generated" />
+
+### Create the Azure AD Application
 
 After adding the remote site settings, the next step is to create and
 configure a new Azure AD application to support calling the Power BI
@@ -137,25 +141,52 @@ to store the client credentials.
 
 <img src="Images\ReadMe\media\image7.png" style="width:3.28333in;height:1.17602in" alt="Graphical user interface, text, application, email Description automatically generated" />
 
-Create Custom Metadata Types with auth settings
+### Create the Custom Metadata Type
 
-<img src="Images\ReadMe\media\image8.png" style="width:3.57506in;height:1.46104in" alt="Graphical user interface, text, application, email Description automatically generated" />
+The next step is to create a Create Custom Metadata Type that will be
+used to track the client credentials required to authenticate with Azure
+AD as a service principal. Start by navigating to the Salesforce
+organization **Setup page** and searching for the **Custom Metadata
+Types** page. Click the **New Custom Metadata Type** button.
+
+<img src="Images\ReadMe\media\image8.png" style="width:5.43333in;height:2.39067in" />
+
+In the **New Custom Metadata Type** form, add a **Label** of **Power BI
+Auth Setting** and an **Object Name** of **Power\_BI\_Auth\_Setting**.
+
+<img src="Images\ReadMe\media\image9.png" style="width:3.97626in;height:1.625in" alt="Graphical user interface, text, application, email Description automatically generated" />
+
+This is placeholder text
+
+<img src="Images\ReadMe\media\image10.png" style="width:6.7in;height:1.04222in" />
+
+xx\.
+
+<img src="Images\ReadMe\media\image11.png" style="width:3.50833in;height:0.64744in" />
+
+x
+
+<img src="Images\ReadMe\media\image12.png" style="width:4.26667in;height:0.95537in" alt="Graphical user interface, text, application Description automatically generated" />
 
 This is placeholder text.
 
-<img src="Images\ReadMe\media\image9.png" style="width:4.78497in;height:1.07143in" alt="Graphical user interface, text, application Description automatically generated" />
+<img src="Images\ReadMe\media\image13.png" style="width:4.81667in;height:1.86489in" />
+
+x
+
+<img src="Images\ReadMe\media\image14.png" style="width:3.80102in;height:1.66234in" alt="Graphical user interface, application Description automatically generated" />
 
 This is placeholder text.
 
-<img src="Images\ReadMe\media\image10.png" style="width:3.80102in;height:1.66234in" alt="Graphical user interface, application Description automatically generated" />
+<img src="Images\ReadMe\media\image15.png" style="width:4.11048in;height:1.27273in" alt="Graphical user interface, application Description automatically generated" />
 
-This is placeholder text.
-
-<img src="Images\ReadMe\media\image11.png" style="width:4.11048in;height:1.27273in" alt="Graphical user interface, application Description automatically generated" />
+### Upload powerbi.js as a Static Resource
 
 Upload powerbi.js as a Resource
 
-<img src="Images\ReadMe\media\image12.png" style="width:4.07143in;height:1.37871in" alt="Graphical user interface, text, application, email Description automatically generated" />
+<img src="Images\ReadMe\media\image16.png" style="width:4.07143in;height:1.37871in" alt="Graphical user interface, text, application, email Description automatically generated" />
+
+## Set up the Development Project
 
 In order to setup and run this sample, you need to install the following
 software.
@@ -167,7 +198,7 @@ software.
 When you have installed Visual Studio Code, you must install a Visual
 Studio Code extension the Salesforce Expansion Pack.
 
-<img src="Images\ReadMe\media\image13.png" style="width:3.59167in;height:1.98739in" />
+<img src="Images\ReadMe\media\image17.png" style="width:3.59167in;height:1.98739in" />
 
 Great blog article in 2017. But so much has changed.
 
@@ -175,7 +206,7 @@ So much has changed.
 
 -   Service principal can be used for App-Owns-Data embedding
 
-<img src="Images\ReadMe\media\image14.png" style="width:5.025in;height:1.93398in" />
+<img src="Images\ReadMe\media\image18.png" style="width:5.025in;height:1.93398in" />
 
 Here is the GitHub repo with the sample code discussed in this article.
 This code is provided in an SFDX project. This is not an introduction to
