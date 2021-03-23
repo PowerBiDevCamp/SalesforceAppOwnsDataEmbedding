@@ -51,7 +51,7 @@ principal.
 
 <img src="Images\CreateAzureAdApplication\media\image5.png" style="width:4.24546in;height:1.11864in" />
 
-Next, you need to create a Client Secret for the application. The Client
+Next, you need to create a **Client Secret** for the application. The Client
 Secret will act as the application's password when it authenticates
 using Client Credentials Flow. Click on the **Certificates & secrets**
 link in the left navigation to move to the **Certificates & secrets**
@@ -66,23 +66,23 @@ Client Secret.
 
 <img src="Images\CreateAzureAdApplication\media\image7.png" style="width:3.22034in;height:1.13228in" />
 
-Once you have created the Client Secret, you should be able to see its
+Once you have created the **Client Secret**, you should be able to see its
 **Value** in the **Client secrets** section.
 
 <img src="Images\CreateAzureAdApplication\media\image8.png" style="width:6.03669in;height:1.22078in" />
 
-Click on the **Copy to clipboard** button to copy the Client Secret into
+Click on the **Copy to clipboard** button to copy the **Client Secret** into
 the clipboard.
 
 <img src="Images\CreateAzureAdApplication\media\image9.png" style="width:4.72051in;height:0.81818in" />
 
-Paste the Client Secret into the same text document with the Client ID.
+Paste the **Client Secret** into the same text document with the **Client ID** and **Tenant ID**.
 
 <img src="Images\CreateAzureAdApplication\media\image10.png" style="width:4.11039in;height:1.47225in" />
 
 Later in the setup process, you will need to configure the
 **SalesforceAppOwnsDataEmbedding** project with these values for the
-Client ID and the Client Secret. Note that these credentials values will
+**Client ID**, **Client Secret** and **Tenant ID**. Note that these credentials values will
 be tracked in the Salesforce environment using a Custom Metadata Type.
 
 ## Configure Service Principal Support in the Power BI Tenant
