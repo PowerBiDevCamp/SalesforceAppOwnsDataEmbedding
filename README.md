@@ -161,11 +161,8 @@ Custom Metadata Type** page.
 <img src="Images\ReadMe\media\image8.png" style="width:5.43333in;height:2.39067in" />
 
 In the **New Custom Metadata Type** page, enter the following values.
-
 -   **Label** = **Power BI Auth Setting**
-
 -   **Plural Label** = **Power BI Auth Settings**
-
 -   **Object Name** = **Power\_BI\_Auth\_Setting**
 
 The **New Custom Metadata Type** page should now match the following
