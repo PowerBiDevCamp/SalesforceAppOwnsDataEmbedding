@@ -44,7 +44,7 @@ configure the project's support for Client Credentials Flow.
 <img src="Images\CreateAzureAdApplication\media\image4.png" style="width:4.08244in;height:1.33898in" />
 
 Copy the **Client ID** (aka Application ID) and paste it into a text
-document so you can use it later in the setup process. Also copy the Tenant ID from the application overview page and paste that into the text document as well.
+document so you can use it later in the setup process. Also copy the Tenant ID and paste that into the text document as well.
 Note that the **Client ID** and **Tenant ID** values will be used by
 **SalesforceAppOwnsDataEmbedding** project to authenticate as a service
 principal.
