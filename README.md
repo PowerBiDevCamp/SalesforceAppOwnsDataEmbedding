@@ -138,6 +138,7 @@ REST API as a service principal. You can create the required Azure AD
 application by following the steps in [**Create an Azure AD Application
 for App-Owns-Data
 Embedding**](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/blob/main/Create%20an%20Azure%20AD%20Application%20for%20App-Owns-Data%20Embedding.md).
+
 Once you have completed the steps to create and configure the new Azure
 AD application, you should have a **Client ID**, **Client Secret** and
 **Tenant ID** that you will need in the next step when you create a
