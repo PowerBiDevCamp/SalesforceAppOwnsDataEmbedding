@@ -167,8 +167,10 @@ workspace.
 If you want the service principal to be able to embed reports for any
 other Power BI workspace in the same tenant, follow the same steps to
 add the service principal in the workspace role of Admin in those
-workspaces as well. At this point you have successfully created and
-configure the new Azure AD application for App-Owns-Data embedding.
+workspaces as well. 
+
+At this point you have successfully created and
+configured the new Azure AD application to support App-Owns-Data embedding.
 Remember you will need the **Client ID**, **Client Secret** and **Tenant ID** to configure
 **SalesforceAppOwnsDataEmbedding** sample project.
 
