@@ -55,28 +55,28 @@ The **SalesforceAppOwnsDataEmbedding** project contains a Lighting Aura
 component named
 [**powerBiReportAura**](https://github.com/PowerBiDevCamp/SalesforceAppOwnsDataEmbedding/tree/main/SalesforceAppOwnsDataEmbedding/force-app/main/default/aura/powerBiReportAura).
 When you add an instance of the **powerBiReportAura** component to a
-Lightning application page, you must configure it with the Workspace ID
-and the Report ID for a specific report in a Power BI workspace. This
-design makes it possible to add multiple instances of the
-**powerBiReportAura** component and configure each one to embed a
-different Power BI report.
+Lightning application page, you must configure it with the **Workspace
+ID** and the **Report ID** for a specific report in a Power BI
+workspace. This design makes it possible to add multiple instances of
+the **powerBiReportAura** component and configure each instance to embed
+a different Power BI report.
 
 <img src="Images\ReadMe\media\image2.png" style="width:6.24324in;height:1.53896in" />
 
 Once you have configured a **powerBiReportAura** component instance with
-a workspace ID and Report ID, these two configuration valued will be
-passed as parameters when the component calls
+a **Workspace ID** and **Report ID**, these two configuration values
+will be passed as parameters when the component calls
 **getEmbeddingDataForReport**. The **PowerBiEmbedManager** class
-responds to this remote function call by returning the embedding data
-and the embed token which will be used to embed a report in the browser.
+responds to this remote function call by returning the embed URL and the
+embed token which will be used to embed a report in the browser.
 
 <img src="Images\ReadMe\media\image3.png" style="width:7.5in;height:1.88333in" />
 
 Once the **powerBiReportAura** component has successfully called
-**getEmbeddingDataForReport**, it has the embedding data and the embed
-token it needs to embed a report on the hosting web page. In a final
-step, the **powerBiReportAura** component executes JavaScript code in
-the browser and uses the [**Power BI JavaScript
+**getEmbeddingDataForReport**, it has acquired the embedding data and
+the embed token it needs to embed a report on the hosting web page. In a
+final step, the **powerBiReportAura** component executes JavaScript code
+in the browser and uses the [**Power BI JavaScript
 API**](https://docs.microsoft.com/en-us/javascript/api/overview/powerbi/overview)
 to implement the report embedding process.
 
@@ -105,11 +105,10 @@ one for free using the [Salesforce lightning platform signup
 page](https://developer.salesforce.com/signup).
 
 Once you have a Salesforce organization for testing, you will need to
-complete the following three tasks to configure the environment for the
+complete the following setup tasks to configure the environment for the
 **SalesforceAppOwnsDataEmbedding** project.
 
--   Add remote site settings for the Azure AD token endpoint and the
-    Power BI Service API
+-   Add remote site settings for Azure AD and Power BI Service API
 
 -   Create an Azure AD application to call the Power Service API
 
